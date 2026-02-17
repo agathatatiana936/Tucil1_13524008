@@ -49,6 +49,7 @@ go version
 ``` 
 
 ### Repository Structure
+```bash
 Tucil1_NIM/
 │
 ├── bin/
@@ -72,6 +73,7 @@ Tucil1_NIM/
 │   └── Tucil1_IF2211_Report.pdf
 │
 └── README.md
+```
 
 ### Compilation Guide
 From src directory, run : 
