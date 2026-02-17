@@ -46,6 +46,7 @@ https://go.dev/dl/
 Verify installation:
 ```bash
 go version
+``` 
 
 ### Repository Structure
 Tucil1_NIM/
@@ -77,16 +78,19 @@ From src directory, run :
 ```bash
 cd src
 go build -o ../bin/queen.exe .
+```
 
 After successful compilation, the executable file will be created at:
 ```bash
 bin/queen.exe
+```
 
 
 ### How to Run the Program
 Run the program from the root directory of the repository.
 ```bash
 bin\queen.exe
+```
 
 ### Program Flow
 1) The program prompts the user to input the board file path
