@@ -6,10 +6,6 @@ import (
 	"strings"
 )
 
-// =========================
-// ANSI Color Utilities
-// =========================
-
 type ansi string
 
 const (

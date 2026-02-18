@@ -86,39 +86,6 @@ func build_grid_lines_plain(b *Queen, solusi []int) ([]string, error) {
 	return lines, nil
 }
 
-
-// Output hasil di terminal
-
-func build_solution_lines(b *Queen, solusi []int) ([]string, error) {
-	N := b.n
-	if len(solusi) != N {
-		return nil, fmt.Errorf("invalid solution length: got %d, expected %d", len(solusi), N)
-	}
-
-	lines := make([]string, N)
-	for r := 0; r < N; r++ {
-		row := make([]rune, N)
-		copy(row, b.raw[r])
-
-		c := solusi[r]
-		if c < 0 || c >= N {
-			return nil, fmt.Errorf("invalid queen column at row %d: %d", r+1, c)
-		}
-
-		row[c] = '#'
-		lines[r] = string(row)
-	}
-	return lines, nil
-}
-
-func print_solution_terminal(boardLines []string, execMs int64, iterasi int64) {
-	for i := 0; i < len(boardLines); i++ {
-		fmt.Println(boardLines[i])
-	}
-	fmt.Printf("Waktu pencarian: %d ms\n", execMs)
-	fmt.Printf("Banyak kasus yang ditinjau: %d kasus\n", iterasi)
-}
-
 func write_lines_to_file(outPath string, lines []string, execMs int64, iterasi int64) error {
 	f, err := os.Create(outPath)
 	if err != nil {
